@@ -1,0 +1,27 @@
+<%- include('partials/header', { title: 'Contact | Atha Construction' }) %>
+
+<% 
+  bannerImage = '/images/contact-us.jpg';
+  bannerAlt = 'Contact Us';
+  bannerTitle = 'Contact Atha Construction';
+  bannerHeading = 'We’d Love to Hear from You';
+%>
+<%- include('partials/banner') %>
+
+
+<section class="sec bg-dark text-white text-center">
+  <div class="py-5">
+    <div class="container">
+      <h2 class="mn-hed">Contact Us</h2>
+      <form method="post" action="/contact-process">
+        <input type="text" name="name" placeholder="Name" class="form-control my-2" required>
+        <input type="email" name="email" placeholder="Email" class="form-control my-2" required>
+        <input type="tel" name="phone" placeholder="Phone No." class="form-control my-2" required>
+        <textarea name="message" placeholder="Message" class="form-control my-2" rows="4"></textarea>
+        <button type="submit" class="btn btn-light">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
