@@ -3,6 +3,7 @@
     "siteName": "Atha Constructions",
     "siteDescription": "Architecture React Next.JS Template",
     "formspreeURL": "https://formspree.io/f/your_api_key",
+    "favIcon": "/img/logo/favicon.png",
     "mailchimp": {
       "url": "",
       "key": ""
@@ -11,7 +12,7 @@
   },
   "header": {
     "logo": {
-      "image": "/img/logo/logo-light.jpeg",
+      "image": "/img/logo/logo.png",
       "alt": "Logo"
     },
     "menu": [
@@ -49,7 +50,7 @@
   },
   "footer": {
     "logo": {
-      "image": "/img/logo/logo-light.jpeg",
+      "image": "/img/logo/logo.png",
       "alt": "Logo"
     },
     "copy": "© 2023 Atha Constructions. All rights reserved.",
