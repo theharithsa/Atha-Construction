@@ -1,0 +1,36 @@
+{
+    "title": "This is How Magic Happens",
+    "subtitle": "How We Work",
+    "items": [
+        {
+            "title": "Initial Consultation",
+            "icon": "/img/icons/7.svg",
+            "text": "We begin by understanding your vision, functional needs, and budget. This forms the foundation for a personalized design and build strategy."
+        },
+        {
+            "title": "Design & Planning",
+            "icon": "/img/icons/5.svg",
+            "text": "Our architects and designers craft detailed plans, 3D models, and documentation while ensuring compliance with all local regulations."
+        },
+        {
+            "title": "Material Selection",
+            "icon": "/img/icons/3.svg",
+            "text": "We help you choose the right materials, finishes, and technologies that match your aesthetic and performance expectations."
+        },
+        {
+            "title": "Execution",
+            "icon": "/img/icons/4.svg",
+            "text": "Our experienced team and project managers ensure on-site execution is handled with precision, safety, and adherence to timelines."
+        },
+        {
+            "title": "Final Inspections & Approvals",
+            "icon": "/img/icons/2.svg",
+            "text": "We conduct rigorous quality checks and coordinate with authorities to secure all necessary approvals and certifications."
+        },
+        {
+            "title": "Handover",
+            "icon": "/img/icons/1.svg",
+            "text": "We deliver a fully finished, ready-to-use space—backed with documentation, warranty details, and post-handover support if needed."
+        }
+    ]
+}
