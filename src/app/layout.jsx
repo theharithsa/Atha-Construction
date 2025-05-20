@@ -18,11 +18,7 @@ export const metadata = {
         default: AppData.settings.siteName,
         template: "%s | " + AppData.settings.siteName,
     },
-    icons: {
-        icon: '/img/logo/favicon.png',
-        shortcut: '/img/logo/favicon.png',
-        apple: '/img/logo/favicon.png',
-    },
+    icon: AppData.header.logo.image,
     description: AppData.settings.siteDescription,
 }
 
