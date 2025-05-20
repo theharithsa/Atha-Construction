@@ -1,0 +1,23 @@
+{
+    "title": "We Take Care of Everything <br>for You!",
+    "subtitle": "Our Advantages",
+    "description": "From initial consultation to project completion, we manage every step <br> with precision, transparency, and creativity.",
+    "items": [
+        {
+            "title": "Listen",
+            "text": "We begin by understanding your vision, goals, and requirements—ensuring every detail is captured before the first sketch."
+        },
+        {
+            "title": "Strategies",
+            "text": "Our team crafts smart, sustainable strategies that align design excellence with practical timelines and budgets."
+        },
+        {
+            "title": "Project Work",
+            "text": "We coordinate all aspects of design, planning, and construction—ensuring seamless execution and quality at every phase."
+        },
+        {
+            "title": "Launch",
+            "text": "After meticulous final checks and walkthroughs, we deliver your finished space—ready for use, on time and as envisioned."
+        }
+    ]
+}

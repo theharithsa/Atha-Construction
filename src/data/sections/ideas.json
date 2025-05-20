@@ -1,0 +1,26 @@
+{
+    "title": "We turn ideas into works of art",
+    "subtitle": "Atha Constructions Purpose",
+    "description": "our purpose is to transform spaces into meaningful experiences — building homes, offices, and structures that are not only functional but also a reflection of dreams, identity, and long-term value.",
+    "button": {
+        "link": "/about",
+        "label": "More About Us"
+    },
+    "items": [
+        {
+            "icon": "/img/icons/3.svg",
+            "link": "/services/service-1",
+            "label": "Architecture"
+        },
+        {
+            "icon": "/img/icons/4.svg",
+            "link": "/services/service-2",
+            "label": "Interiors"
+        },
+        {
+            "icon": "/img/icons/5.svg",
+            "link": "/services/service-3",
+            "label": "Planning"
+        }
+    ]
+}

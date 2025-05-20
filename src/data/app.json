@@ -1,0 +1,143 @@
+{
+  "settings": {
+    "siteName": "Atha Constructions",
+    "siteDescription": "Architecture React Next.JS Template",
+    "formspreeURL": "https://formspree.io/f/your_api_key",
+    "mailchimp": {
+      "url": "",
+      "key": ""
+    },
+    "perPage": 6
+  },
+  "header": {
+    "logo": {
+      "image": "/img/logo/logo-light.jpeg",
+      "alt": "Logo"
+    },
+    "menu": [
+      {
+        "label": "Home",
+        "link": "/",
+        "children": 0
+      },
+      {
+        "label": "Services",
+        "link": "/services",
+        "children": 0
+      },
+      {
+        "label": "Projects",
+        "link": "/projects",
+        "children": 0
+      },
+      {
+        "label": "Contact Us",
+        "link": "/contact",
+        "children": 0
+      },
+      {
+        "label": "team",
+        "link": "/team",
+        "children": 0
+      },
+      {
+        "label": "about",
+        "link": "/about",
+        "children": 0
+      }
+    ]
+  },
+  "footer": {
+    "logo": {
+      "image": "/img/logo/logo-light.jpeg",
+      "alt": "Logo"
+    },
+    "copy": "© 2023 Atha Constructions. All rights reserved.",
+    "menu": [
+      {
+        "label": "About",
+        "link": "/about"
+      },
+      {
+        "label": "Services",
+        "link": "/services"
+      },
+      {
+        "label": "Projects",
+        "link": "/projects"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact"
+      }
+    ]
+  },
+  "social": [
+    {
+      "link": "https://www.facebook.com/profile.php?id=61569376468425",
+      "title": "Facebook"
+    },
+    {
+      "link": "https://www.linkedin.com/company/athaconstruction.in/",
+      "title": "LinkedIn"
+    },
+    {
+      "link": "https://www.instagram.com/atha_construction/",
+      "title": "Instagram"
+    },
+    {
+      "link": "https://www.youtube.com/@athaconstruction",
+      "title": "Youtube"
+    }
+  ],
+  "projects": {
+    "categories": [
+      {
+        "name": "Architecture",
+        "slug": "architecture"
+      },
+      {
+        "name": "Interior",
+        "slug": "interior"
+      },
+      {
+        "name": "Decor",
+        "slug": "decor"
+      }
+    ],
+    "cities": [
+      {
+        "name": "Banglore",
+        "slug": "banglore"
+      },
+      {
+        "name": "Ballari",
+        "slug": "ballari"
+      },
+      {
+        "name": "Mysore",
+        "slug": "mysore"
+      }
+    ]
+  },
+  "team": {
+    "categories": [
+      {
+        "name": "Executive",
+        "slug": "executive"
+      },
+      {
+        "name": "Data centers",
+        "slug": "data-centers"
+      },
+      {
+        "name": "Education",
+        "slug": "education"
+      },
+      {
+        "name": "Workplace",
+        "slug": "workplace"
+      }
+    ]
+  }
+}
