@@ -1,6 +1,6 @@
 <section class="sec-banner">
     <div class="bnr-img">
-        <img src="{{baseUrl}}/assets/images/properties/banner.png" class="w-100" alt="Home Construction In Bangalore" title="Home Construction In Bangalore">
+        <img src="/assets/images/properties/banner.png" class="w-100" alt="Home Construction In Bangalore" title="Home Construction In Bangalore">
 
         <div class="bg-bnr-layer">
 
@@ -29,11 +29,11 @@
             <div class="containers">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="{{baseUrl}}/assets/images/properties/container-1.png" class="w-100 cont-1" alt="Atha Construction Packages" title="Atha Construction Packages" onclick="showModel()">
+                        <img src="/assets/images/properties/container-1.png" class="w-100 cont-1" alt="Atha Construction Packages" title="Atha Construction Packages" onclick="showModel()">
                     </div>
                     
                     <div class="col-lg-6 mt-4 mt-lg-0">
-                        <img src="{{baseUrl}}/assets/images/properties/container-2.png" class="w-100 cont-2" alt="Construction Companies In Bangalore"
+                        <img src="/assets/images/properties/container-2.png" class="w-100 cont-2" alt="Construction Companies In Bangalore"
                             onclick="showModel1()" title="Construction Companies In Bangalore">
                     </div>
                 </div>
@@ -84,7 +84,7 @@
 
             <div class="col-lg-4">
                 <button class="pop-btn d-block mx-auto">
-                  <a href="{{baseUrl}}/contact" class="text-dark" style="text-decoration:none;">Enquire Now</a>
+                  <a href="/contact" class="text-dark" style="text-decoration:none;">Enquire Now</a>
                 </button>
             </div>
 
@@ -109,7 +109,7 @@
                 </p>
 
             <div class="col-lg-6 ">
-            <form role="form" name="form1" method="post" id="footer-popup" action="{{baseUrl}}/contact">
+            <form role="form" name="form1" method="post" id="footer-popup" action="/contact">
 
                 <div id="footer-note"></div>
 
@@ -207,7 +207,7 @@
 
             <div class="col-lg-4">
                 <button class="pop-btn d-block mx-auto">
-                    <a href="{{baseUrl}}/contact" class="text-dark" style="text-decoration:none;">Select</a>
+                    <a href="/contact" class="text-dark" style="text-decoration:none;">Select</a>
                 </button>
             </div>
 
@@ -265,7 +265,7 @@
         
         const formData = new FormData(this);
         
-        fetch('{{baseUrl}}/contact', {
+        fetch('/contact', {
             method: 'POST',
             body: formData
         })

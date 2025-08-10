@@ -1,6 +1,6 @@
 <section class="sec-banner">
     <div class="bnr-img">
-        <img src="{{baseUrl}}/assets/images/contact-us.jpg" class="w-100" alt="Best Construction Companies in Bangalore" title="Best Construction Companies in Bangalore">
+        <img src="/assets/images/contact-us.jpg" class="w-100" alt="Best Construction Companies in Bangalore" title="Best Construction Companies in Bangalore">
         <div class="bg-bnr-layer"></div>
         <div class="baner-cont-abs1 d-lg-block d-none">
             <h1>{{meta.h1}}</h1>
@@ -14,7 +14,7 @@
             <h2 class="mn-hed">Contact Us</h2>
             
             <div class="form-cont pt-4">
-                <form role="form" name="form1" method="post" id="contact-form" action="{{baseUrl}}/contact">
+                <form role="form" name="form1" method="post" id="contact-form" action="/contact">
                     <div id="contact-note"></div>
                     
                     <div class="nam-mob">
@@ -68,7 +68,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     submitBtn.value = 'Sending...';
     
     try {
-        const response = await fetch('{{baseUrl}}/contact', {
+        const response = await fetch('/contact', {
             method: 'POST',
             body: formData
         });
