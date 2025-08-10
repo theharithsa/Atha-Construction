@@ -253,4 +253,68 @@ router.get('/thankyou', (req: Request, res: Response) => {
   });
 });
 
+/**
+ * Terms and Conditions page
+ */
+router.get('/terms', (req: Request, res: Response) => {
+  const meta: PageMeta = {
+    title: 'Terms and Conditions | Atha Construction Bangalore Karnataka',
+    description: 'Read the Terms and Conditions for Atha Construction services. Understand our construction policies, project terms, and legal agreements for building projects in Bangalore.',
+    keywords: 'terms conditions construction company Bangalore, construction contract terms Karnataka, building agreement Bangalore, construction legal terms',
+    h1: 'Terms and Conditions'
+  };
+
+  const currentPage = getCurrentPageName(req.path);
+  const canonicalUrl = generateCanonicalUrl(req.protocol, req.get('host') || '', req.originalUrl);
+
+  const recentPosts = getRecentPosts(3);
+
+  res.render('terms', {
+    meta,
+    currentPage,
+    canonicalUrl,
+    baseUrl: config.baseUrl,
+    analytics: config.analytics,
+    // Footer conditional sections
+    showTestimonials: false,
+    showBlogs: false,
+    showWorkWithUs: false,
+    showFAQ: false,
+    recentBlogPosts: recentPosts,
+    layout: 'main'
+  });
+});
+
+/**
+ * Privacy Policy page
+ */
+router.get('/privacy', (req: Request, res: Response) => {
+  const meta: PageMeta = {
+    title: 'Privacy Policy | Atha Construction Data Protection Bangalore',
+    description: 'Learn how Atha Construction protects your privacy and personal data. Our privacy policy covers Google Analytics usage, data collection, and information security practices.',
+    keywords: 'privacy policy construction company Bangalore, data protection construction services, Google Analytics privacy policy, construction company data security',
+    h1: 'Privacy Policy'
+  };
+
+  const currentPage = getCurrentPageName(req.path);
+  const canonicalUrl = generateCanonicalUrl(req.protocol, req.get('host') || '', req.originalUrl);
+
+  const recentPosts = getRecentPosts(3);
+
+  res.render('privacy', {
+    meta,
+    currentPage,
+    canonicalUrl,
+    baseUrl: config.baseUrl,
+    analytics: config.analytics,
+    // Footer conditional sections
+    showTestimonials: false,
+    showBlogs: false,
+    showWorkWithUs: false,
+    showFAQ: false,
+    recentBlogPosts: recentPosts,
+    layout: 'main'
+  });
+});
+
 export default router;

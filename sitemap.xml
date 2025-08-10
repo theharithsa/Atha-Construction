@@ -79,6 +79,22 @@
   <priority>0.75</priority>
 </url>
 
+<!-- Terms and Conditions Page -->
+<url>
+  <loc>https://athaconstruction.in/terms</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
+<!-- Privacy Policy Page -->
+<url>
+  <loc>https://athaconstruction.in/privacy</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
 <!-- Blog Main Page -->
 <url>
   <loc>https://athaconstruction.in/blogs</loc>
