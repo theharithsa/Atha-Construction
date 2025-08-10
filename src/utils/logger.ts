@@ -1,4 +1,6 @@
 import winston from 'winston';
+import path from 'path';
+import fs from 'fs';
 import { config } from '../config';
 
 // Define log levels
@@ -31,35 +33,38 @@ const format = winston.format.combine(
   ),
 );
 
-// Define transports
-const transports = [
-  // Console logging
+// Detect serverless / read-only environments (like Vercel)
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_REGION || process.env.NOW_REGION);
+
+// Always include console logging
+const transports: winston.transport[] = [
   new winston.transports.Console({
-    format: winston.format.combine(
-      winston.format.colorize(),
-      winston.format.simple()
-    )
-  }),
-  
-  // File logging for errors
-  new winston.transports.File({
-    filename: 'logs/error.log',
-    level: 'error',
-    format: winston.format.combine(
-      winston.format.timestamp(),
-      winston.format.json()
-    )
-  }),
-  
-  // File logging for all logs
-  new winston.transports.File({
-    filename: 'logs/combined.log',
-    format: winston.format.combine(
-      winston.format.timestamp(),
-      winston.format.json()
-    )
+    format: winston.format.combine(winston.format.colorize(), winston.format.simple()),
   }),
 ];
+
+// Include file transports only when filesystem is writable (not serverless)
+if (!isServerless) {
+  const logsDir = path.join(process.cwd(), 'logs');
+  try {
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+    transports.push(
+      new winston.transports.File({
+        filename: path.join(logsDir, 'error.log'),
+        level: 'error',
+        format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
+      }),
+      new winston.transports.File({
+        filename: path.join(logsDir, 'combined.log'),
+        format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
+      })
+    );
+  } catch {
+    // If creating log directory fails for any reason, skip file transports
+  }
+}
 
 // Create the logger
 const logger = winston.createLogger({
