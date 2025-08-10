@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Villa Construction Company mysore |Atha construction';
-$description = 'Explore exciting career opportunities with Atha Construction. Join our dynamic team and build your future with a leading name in the construction industry.';
-$keywords = 'Villa Construction Company mysore, Villa Construction Company In Bangalore';
-$h1 = "";
+$title = 'Construction Projects Bangalore | Premium Villas & Homes Portfolio Karnataka';
+$description = 'Explore our premium construction projects in Bangalore - luxury villas, modern homes & commercial buildings. View completed projects across Whitefield, HSR Layout, Electronic City & Karnataka.';
+$keywords = 'construction projects Bangalore, villa construction Bangalore, luxury homes Bangalore, residential projects Karnataka, construction portfolio Bangalore, completed projects Bangalore, villa builders Bangalore';
+$h1 = "Premium Construction Projects Across Bangalore - Excellence in Every Build";
 
 include 'header.php';
 ?>

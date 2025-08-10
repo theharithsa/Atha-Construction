@@ -11,10 +11,10 @@ const router = Router();
  */
 router.get('/about', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'About us | Residential Construction Companies in Bangalore',
-    description: 'Learn about Atha Construction, the most reputable residential construction companies in Bangalore, which produces high-quality homes with creativity and skill.',
-    keywords: 'residential construction companies in bangalore, Home Construction contractors In Bangalore, Atha construction in bangalore',
-    h1: 'Atha Construction: Built on Experience, Driven by Vision'
+    title: 'About Atha Construction | Leading Residential Builders in Bangalore Karnataka',
+    description: 'Discover Atha Construction - Bangalore\'s trusted residential construction company with 8+ years experience. Expert builders specializing in quality homes, villas & commercial projects across Karnataka.',
+    keywords: 'residential construction company Bangalore, home builders Bangalore Karnataka, construction company near me Bangalore, villa builders Bangalore, apartment construction Bangalore, trusted builders Karnataka, construction services Bangalore',
+    h1: 'Atha Construction: Bangalore\'s Premier Construction Company Built on Excellence'
   };
 
   const currentPage = getCurrentPageName(req.path);
@@ -43,10 +43,10 @@ router.get('/about', (req: Request, res: Response) => {
  */
 router.get('/services', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'Atha Construction services | Home architecture design',
-    description: 'Atha Construction offers expert home architecture design services, blending creativity and functionality to bring your dream home to life. Contact us for customized solutions!',
-    keywords: 'Home Architecture Design, Home Construction Services in Ballari',
-    h1: 'Experience the Comfort'
+    title: 'Construction Services Bangalore | Turnkey Home Builders & Architects Karnataka',
+    description: 'Complete construction services in Bangalore - Turnkey construction, home architecture, interior design, project management. Expert builders serving Whitefield, Electronic City, HSR Layout & all Bangalore areas.',
+    keywords: 'construction services Bangalore, turnkey construction Bangalore, home architecture Bangalore, interior design Bangalore, construction contractors Bangalore, building services Karnataka, project management construction Bangalore',
+    h1: 'Complete Construction Services in Bangalore - From Design to Handover'
   };
 
   const currentPage = getCurrentPageName(req.path);
@@ -128,10 +128,10 @@ router.get('/services', (req: Request, res: Response) => {
  */
 router.get('/packages', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'House Planners in Bangalore | Atha Construction Packages',
-    description: 'Discover expert house planners in Bangalore with Atha Construction Packages. Tailored designs, quality construction, and affordable pricing. Visit us now!',
-    keywords: 'Atha Construction Packages, house planners in bangalore, home architecture design',
-    h1: 'Solid Presence, Built to Last'
+    title: 'Construction Packages Bangalore | Affordable Home Building Plans Karnataka',
+    description: 'Transparent construction packages & pricing in Bangalore. Custom home building plans with fixed costs, quality materials & timely delivery. Best value construction packages in Karnataka.',
+    keywords: 'construction packages Bangalore, home construction cost Bangalore, construction pricing Karnataka, affordable home builders Bangalore, construction plans Bangalore, house construction packages Bangalore, villa construction cost Bangalore',
+    h1: 'Transparent Construction Packages in Bangalore - Fixed Price, Premium Quality'
   };
 
   const currentPage = getCurrentPageName(req.path);
@@ -160,10 +160,10 @@ router.get('/packages', (req: Request, res: Response) => {
  */
 router.get('/properties', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'Villa Construction Company mysore | Atha construction',
-    description: 'Explore exciting career opportunities with Atha Construction. Join our dynamic team and build your future with a leading name in the construction industry.',
-    keywords: 'Villa Construction Company mysore, Villa Construction Company In Bangalore',
-    h1: 'Explore Properties'
+    title: 'Construction Projects Bangalore | Premium Villas & Homes Portfolio Karnataka',
+    description: 'Explore our premium construction projects in Bangalore - luxury villas, modern homes & commercial buildings. View completed projects across Whitefield, HSR Layout, Electronic City & Karnataka.',
+    keywords: 'construction projects Bangalore, villa construction Bangalore, luxury homes Bangalore, residential projects Karnataka, construction portfolio Bangalore, completed projects Bangalore, villa builders Bangalore, premium construction Bangalore',
+    h1: 'Premium Construction Projects Across Bangalore - Excellence in Every Build'
   };
 
   const currentPage = getCurrentPageName(req.path);
@@ -193,10 +193,10 @@ router.get('/properties', (req: Request, res: Response) => {
  */
 router.get('/gallery', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'Atha construction Gallery | Home designers In mysore',
-    description: 'Explore the gallery of Atha Construction, top home designers in mysore. Discover innovative designs, quality craftsmanship, and bespoke solutions for your dream home.',
-    keywords: 'Home Designers In mysore, Innovative designers in Bangalore',
-    h1: 'Gallery'
+    title: 'Construction Gallery Bangalore | Home Design & Building Photos Karnataka',
+    description: 'Browse our construction gallery showcasing premium homes, villas & interiors in Bangalore. See innovative designs, quality craftsmanship & completed projects across Karnataka.',
+    keywords: 'construction gallery Bangalore, home design photos Bangalore, villa gallery Bangalore, interior design gallery Bangalore, construction work photos Karnataka, building gallery Bangalore, architecture photos Bangalore',
+    h1: 'Construction Gallery - Inspiring Homes & Designs Across Bangalore'
   };
 
   const currentPage = getCurrentPageName(req.path);

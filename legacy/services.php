@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Atha Construction services | Home architecture design';
-$description = 'Atha Construction offers expert home architecture design services, blending creativity and functionality to bring your dream home to life. Contact us for customized solutions!';
-$keywords = 'Home Architecture Design, Home Construction Services in Ballari';
-$h1 = "";
+$title = 'Construction Services Bangalore | Turnkey Home Builders & Architects Karnataka';
+$description = 'Complete construction services in Bangalore - Turnkey construction, home architecture, interior design, project management. Expert builders serving Whitefield, Electronic City, HSR Layout & all Bangalore areas.';
+$keywords = 'construction services Bangalore, turnkey construction Bangalore, home architecture Bangalore, interior design Bangalore, construction contractors Bangalore, building services Karnataka';
+$h1 = "Complete Construction Services in Bangalore - From Design to Handover";
 
 include 'header.php';
 ?>

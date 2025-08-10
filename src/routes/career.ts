@@ -41,10 +41,10 @@ const upload = multer({
  */
 router.get('/', (req: Request, res: Response) => {
   const meta: PageMeta = {
-    title: 'Atha construction | Atha construction Career',
-    description: 'Explore exciting career opportunities with Atha Construction. Join our dynamic team and build your future with a leading name in the construction industry.',
-    keywords: 'Top Construction Company In Ballari, Home Construction In Ballari, Construction Companies In Bangalore, Villa Construction Company In Bangalore',
-    h1: 'Atha construction Career'
+    title: 'Construction Jobs Bangalore | Careers at Top Building Company Karnataka',
+    description: 'Join Bangalore\'s leading construction company! Explore exciting career opportunities with Atha Construction. We\'re hiring engineers, architects, project managers & construction professionals across Karnataka.',
+    keywords: 'construction jobs Bangalore, construction careers Karnataka, construction company jobs Bangalore, civil engineer jobs Bangalore, architect jobs Bangalore, construction hiring Bangalore, building industry jobs Karnataka',
+    h1: 'Build Your Career with Bangalore\'s Leading Construction Company'
   };
 
   const currentPage = getCurrentPageName(req.path);

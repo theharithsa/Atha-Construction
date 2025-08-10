@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Best Construction Company In Bangalore | Atha construction';
-$description = 'Explore Atha Construction, the best construction company in Bangalore. Expert builders delivering quality, innovation, and excellence in every project. Visit us';
-$keywords = 'Construction Companies In Bangalore, Best Construction Company In Bangalore, residential construction companies in bangalore, ';
-$h1 = "Construction Company In Bangalore Crafting Dreams, Building Legacies";
+$title = 'Top Construction Company in Bangalore | Premier Home Builders Karnataka';
+$description = 'Leading construction company in Bangalore specializing in residential & commercial projects. Expert home builders offering turnkey construction services across Karnataka including Whitefield, Electronic City & HSR Layout.';
+$keywords = 'construction company Bangalore, best builders Bangalore, home construction Bangalore, residential construction companies Bangalore, construction services Karnataka, builders near me Bangalore, villa construction Bangalore, apartment construction Bangalore';
+$h1 = "Premier Construction Company in Bangalore - Building Dreams Across Karnataka";
 
 include 'header.php';
 ?>

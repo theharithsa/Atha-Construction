@@ -1,9 +1,9 @@
 <?php
 
-$title = 'House Planners in Bangalore | Atha Construction Packages';
-$description = 'Discover expert house planners in Bangalore with Atha Construction Packages. Tailored designs, quality construction, and affordable pricing. Visit us now!';
-$keywords = 'Atha Construction Packages, house planners in bangalore, home architecture design';
-$h1 = "Solid Presence, Built to Last";
+$title = 'Construction Packages Bangalore | Affordable Home Building Plans Karnataka';
+$description = 'Transparent construction packages & pricing in Bangalore. Custom home building plans with fixed costs, quality materials & timely delivery. Best value construction packages in Karnataka.';
+$keywords = 'construction packages Bangalore, home construction cost Bangalore, construction pricing Karnataka, affordable home builders Bangalore, construction plans Bangalore, house construction packages Bangalore';
+$h1 = "Transparent Construction Packages in Bangalore - Fixed Price, Premium Quality";
 
 include 'header.php';
 ?>

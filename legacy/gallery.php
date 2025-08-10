@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Atha construction Gallery | Home designers In mysore';
-$description = 'Explore the gallery of Atha Construction, top home designers in mysore. Discover innovative designs, quality craftsmanship, and bespoke solutions for your dream home.';
-$keywords = 'Home Designers In mysore, Innovative designers in Bangalore';
-$h1 = "";
+$title = 'Construction Gallery Bangalore | Home Design & Building Photos Karnataka';
+$description = 'Browse our construction gallery showcasing premium homes, villas & interiors in Bangalore. See innovative designs, quality craftsmanship & completed projects across Karnataka.';
+$keywords = 'construction gallery Bangalore, home design photos Bangalore, villa gallery Bangalore, interior design gallery Bangalore, construction work photos Karnataka, building gallery Bangalore';
+$h1 = "Construction Gallery - Inspiring Homes & Designs Across Bangalore";
 
 include 'header.php';
 ?>

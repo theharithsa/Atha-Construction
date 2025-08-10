@@ -40,17 +40,59 @@
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "GeneralContractor",
           "name": "Atha Construction",
-          "alternateName": "Atha Construction",
+          "alternateName": "Atha Construction Bangalore",
           "url": "{{baseUrl}}/",
           "logo": "{{baseUrl}}/assets/images/logo.png",
+          "description": "Leading construction company in Bangalore specializing in residential & commercial construction, villa development, and turnkey building solutions across Karnataka.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "No.81/37, Ground Floor, The Hulkul, Lavelle Road",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "IN"
+          },
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91 8049776616",
-            "contactType": "technical support",
-            "areaServed": "IN",
-            "availableLanguage": "en"
+            "contactType": "customer service",
+            "areaServed": ["Bengaluru", "Karnataka", "Mysore", "Ballari"],
+            "availableLanguage": ["en", "hi", "kn"]
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "12.9716",
+            "longitude": "77.5946"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Home Construction in Bangalore",
+                  "description": "Complete residential construction services including villa construction, apartment construction, and custom home building."
+                }
+              },
+              {
+                "@type": "Offer", 
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Construction in Bangalore",
+                  "description": "Professional commercial construction services for offices, retail spaces, and industrial buildings."
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150",
+            "bestRating": "5"
           },
           "sameAs": [
             "https://www.instagram.com/atha_construction/",

@@ -1,4 +1,32 @@
+# Robots.txt for Atha Construction - Leading Construction Company in Bangalore
+# https://athaconstruction.in/robots.txt
+
+# Allow all search engines to crawl the website
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow access to sensitive directories and files
 Disallow: /cgi-bin/
+Disallow: /logs/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /tsconfig.json
+Disallow: /GTM_IMPLEMENTATION.md
+Disallow: /SEO_OPTIMIZATION_SUMMARY.md
+Disallow: /*.log
+
+# Allow important assets and images for SEO
+Allow: /assets/
+Allow: /public/
+
+# Crawl-delay for respectful crawling (optional)
+Crawl-delay: 1
+
+# Sitemap location for search engines
 Sitemap: https://athaconstruction.in/sitemap.xml
+
+# Additional sitemaps (if you create specialized ones later)
+# Sitemap: https://athaconstruction.in/sitemap-images.xml
+# Sitemap: https://athaconstruction.in/sitemap-news.xml

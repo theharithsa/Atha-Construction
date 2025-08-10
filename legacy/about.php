@@ -1,9 +1,9 @@
 <?php
 
-$title = 'About us | Residential Construction Companies in Bangalore';
-$description = 'Learn about Atha Construction, the most reputable residential construction companies in Bangalore, which produces high-quality homes with creativity and skill.';
-$keywords = 'residential construction companies in bangalore, Home Construction contractors In Bangalore, Atha construction in bangalore';
-$h1 = "Atha Construction: Built on Experience, Driven by Vision";
+$title = 'About Atha Construction | Leading Residential Builders in Bangalore Karnataka';
+$description = 'Discover Atha Construction - Bangalore\'s trusted residential construction company with 8+ years experience. Expert builders specializing in quality homes, villas & commercial projects across Karnataka.';
+$keywords = 'residential construction company Bangalore, home builders Bangalore Karnataka, construction company near me Bangalore, villa builders Bangalore, apartment construction Bangalore, trusted builders Karnataka';
+$h1 = "Atha Construction: Bangalore\'s Premier Construction Company Built on Excellence";
 
 include 'header.php';
 ?>

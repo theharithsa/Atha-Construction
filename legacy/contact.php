@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Contact|Atha construction in  Bangalore | Get in touch with Us';
-$description = 'Atha Construction is a leading construction company in Bangalore. Get in touch with Atha Construction for quality, reliable, and innovative building solutions today!';
-$keywords = 'Construction Company In Ballari';
-$h1 = "";
+$title = 'Contact Best Construction Company Bangalore | Get Free Quote Karnataka';
+$description = 'Contact Bangalore\'s leading construction company for free consultation & quotes. Expert builders available across Bangalore, Mysore & Ballari. Call +91 8049776616 or visit our offices.';
+$keywords = 'contact construction company Bangalore, construction company near me Bangalore, builders contact Bangalore, construction consultation Bangalore, free quote construction Bangalore';
+$h1 = "Contact Bangalore\'s Premier Construction Company - Free Consultation Available";
 
 include 'header.php';
 ?>

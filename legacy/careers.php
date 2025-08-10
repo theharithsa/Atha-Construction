@@ -1,9 +1,9 @@
 <?php
 
-$title = 'Atha construction |Atha construction Carrer';
-$description = 'Explore exciting career opportunities with Atha Construction. Join our dynamic team and build your future with a leading name in the construction industry.';
-$keywords = 'Top Construction Company In Ballari, Home Construction In Ballari, Construction Companies In Bangalore, Villa Construction Company In Bangalore';
-$h1 = "Atha construction Carrer";
+$title = 'Construction Jobs Bangalore | Careers at Top Building Company Karnataka';
+$description = 'Join Bangalore\'s leading construction company! Explore exciting career opportunities with Atha Construction. We\'re hiring engineers, architects, project managers & construction professionals across Karnataka.';
+$keywords = 'construction jobs Bangalore, construction careers Karnataka, construction company jobs Bangalore, civil engineer jobs Bangalore, architect jobs Bangalore, construction hiring Bangalore';
+$h1 = "Build Your Career with Bangalore\'s Leading Construction Company";
 
 include 'header.php';
 ?>

@@ -2,76 +2,198 @@
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<!-- Main Pages - Bangalore Construction Company -->
 <url>
   <loc>https://athaconstruction.in/</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/about</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/packages</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/properties</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/careers</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/blogs</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/gallery</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/services</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/contact</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/blog/home-construction-company-in-bangalore</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/blog/pre-construction-planning-guide</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/blog/construction-companies-in-bangalore</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://athaconstruction.in/blog/top-10-construction-mistakes-to-avoid</loc>
-  <lastmod>2025-02-17T07:29:15+00:00</lastmod>
-  <priority>0.64</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/ATHA-CONSTRUCTIONS.jpg</image:loc>
+    <image:title>Best Construction Company in Bangalore Karnataka</image:title>
+    <image:caption>Premier Construction Company Bangalore - Expert Home Builders Karnataka</image:caption>
+  </image:image>
 </url>
 
+<!-- About Page - Construction Company Information -->
+<url>
+  <loc>https://athaconstruction.in/about</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/about/about.jpg</image:loc>
+    <image:title>Leading Home Builders Bangalore - Construction Excellence Karnataka</image:title>
+  </image:image>
+</url>
+
+<!-- Services Page - Construction Services Bangalore -->
+<url>
+  <loc>https://athaconstruction.in/services</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
+</url>
+
+<!-- Packages Page - Construction Pricing Bangalore -->
+<url>
+  <loc>https://athaconstruction.in/packages</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<!-- Properties Page - Construction Projects Portfolio -->
+<url>
+  <loc>https://athaconstruction.in/properties</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Gallery Page - Construction Work Photos -->
+<url>
+  <loc>https://athaconstruction.in/gallery</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<!-- Contact Page - Construction Company Contact -->
+<url>
+  <loc>https://athaconstruction.in/contact</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Career Page - Construction Jobs Bangalore -->
+<url>
+  <loc>https://athaconstruction.in/careers</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<!-- Blog Main Page -->
+<url>
+  <loc>https://athaconstruction.in/blogs</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<!-- Blog Articles - Construction Industry Content -->
+<url>
+  <loc>https://athaconstruction.in/blog/home-construction-company-in-bangalore</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/home-construction-company-in-bangalore.webp</image:loc>
+    <image:title>Home Construction Company in Bangalore</image:title>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/blog/pre-construction-planning-guide</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/blog1.jpg</image:loc>
+    <image:title>Pre-Construction Planning Guide</image:title>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/blog/construction-companies-in-bangalore</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/blog2.jpg</image:loc>
+    <image:title>Best Construction Company in Bangalore</image:title>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/blog/top-10-construction-mistakes-to-avoid</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+  <image:image>
+    <image:loc>https://athaconstruction.in/assets/images/blog3.png</image:loc>
+    <image:title>Top 10 Construction Mistakes to Avoid</image:title>
+  </image:image>
+</url>
+
+<!-- Legacy PHP Pages - For Backward Compatibility -->
+<url>
+  <loc>https://athaconstruction.in/legacy/index.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/about.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/services.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/packages.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/properties.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/gallery.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/contact.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/careers.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+
+<url>
+  <loc>https://athaconstruction.in/legacy/blogs.php</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
 
 </urlset>
