@@ -65,10 +65,10 @@ export const config = {
 
   // Static files and views
   paths: {
-    static: path.join(__dirname, '../../public'),
-    // Point to the source views so templates are found when running from dist
-    views: path.join(__dirname, '../../src/views'),
-    uploads: path.join(__dirname, '../../uploads'),
+    // Use process.cwd() so paths resolve correctly in Vercel serverless and local/dist
+    static: path.join(process.cwd(), 'public'),
+    views: path.join(process.cwd(), 'src/views'),
+    uploads: path.join(process.cwd(), 'uploads'),
   },
 };
 

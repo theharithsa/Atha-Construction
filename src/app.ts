@@ -39,9 +39,7 @@ class App {
       logger.info('Environment configuration validated successfully');
     } catch (error) {
       logger.error('Environment validation failed:', error);
-      if (config.nodeEnv === 'production') {
-        process.exit(1);
-      }
+      // Do not exit in serverless/Vercel environment
     }
   }
 

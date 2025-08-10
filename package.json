@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
+    "vercel-build": "tsc",
     "dev": "nodemon src/server.ts",
     "watch": "tsc -w",
     "dev:watch": "concurrently \"npm run watch\" \"npm run dev\"",
