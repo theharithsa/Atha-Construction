@@ -77,7 +77,7 @@ class App {
     this.app.use(sanitizeInput);
     
     // Static files with caching headers
-    this.app.use('/assets', express.static(path.join(__dirname, '../public/assets'), {
+    this.app.use('/assets', express.static(path.join(config.paths.static, 'assets'), {
       maxAge: '30d', // Cache for 30 days
       setHeaders: (res, filePath) => {
         // Set proper CORS headers for assets
