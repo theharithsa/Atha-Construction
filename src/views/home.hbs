@@ -1,10 +1,11 @@
 <section class="sec-banner">
     <div class="bnr-img">
-        <video autoplay muted loop playsinline id="vid" class="w-100" preload="metadata" poster="{{baseUrl}}/assets/images/banner.jpg">
-            <source src="{{baseUrl}}/assets/images/banner.mp4" type="video/mp4">
-            <!-- Fallback image for browsers that don't support video -->
-            <img src="{{baseUrl}}/assets/images/banner.jpg" alt="Atha Construction Banner" class="w-100">
+        <video autoplay muted playsinline webkit-playsinline loop id="vid" class="w-100" preload="auto" oncanplay="this.muted=true;this.play();">
+            <source src="/assets/images/banner.mp4?v=2" type="video/mp4">
+            <source src="/assets/images/motion.mp4" type="video/mp4">
+            <source src="/assets/images/Web%20Video.mp4" type="video/mp4">
         </video>
+        <button id="vidPlayBtn" aria-label="Play video" style="display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:12px 20px;border:0;border-radius:4px;background:#000;color:#fff;opacity:0.8;z-index:2;cursor:pointer;">Play</button>
 
         <!--<div class="bg-bnr-layer">
 
@@ -237,11 +238,91 @@
     </div>
 </section>
 
+<script>
+// Ensure video plays on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('vid');
+    const playBtn = document.getElementById('vidPlayBtn');
+    if (!video) return;
+
+    const sourceEls = Array.from(video.querySelectorAll('source'));
+    const sources = sourceEls.map(s => s.src);
+    let current = 0;
+    let trying = false;
+
+    function setSource(idx) {
+        const src = sources[idx];
+        if (!src) return false;
+        video.removeAttribute('src');
+        sourceEls.forEach(el => el.remove());
+        const s = document.createElement('source');
+        s.src = src;
+        s.type = 'video/mp4';
+        video.appendChild(s);
+        video.load();
+        return true;
+    }
+
+    function tryPlay() {
+        video.muted = true;
+        return video.play();
+    }
+
+    function nextSource() {
+        if (trying) return;
+        trying = true;
+        current += 1;
+        if (setSource(current)) {
+            tryPlay().finally(() => { trying = false; });
+        } else {
+            trying = false;
+            if (playBtn) playBtn.style.display = 'inline-block';
+        }
+    }
+
+    function attempt(auto = true) {
+        tryPlay().then(() => {
+            if (playBtn) playBtn.style.display = 'none';
+        }).catch(err => {
+            if (auto && playBtn) playBtn.style.display = 'inline-block';
+        });
+    }
+
+    // initialize with first source
+    setSource(0);
+    attempt(true);
+
+    // Error-based fallbacks
+    video.addEventListener('error', () => {
+        // MEDIA_ERR_SRC_NOT_SUPPORTED or network
+        nextSource();
+    });
+    video.addEventListener('stalled', () => {
+        nextSource();
+    });
+    video.addEventListener('abort', () => {
+        nextSource();
+    });
+
+    // retry on loadeddata and visibility change
+    video.addEventListener('loadeddata', () => {
+        if (video.paused) attempt(false);
+    });
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && video.paused) attempt(false);
+    });
+
+    // click-to-play fallback
+    if (playBtn) {
+        playBtn.addEventListener('click', () => {
+            attempt(false);
+            video.addEventListener('playing', () => playBtn.style.display = 'none', { once: true });
+        });
+    }
+});
+</script>
 
 <style>
-
-
-
 </style>
 
 

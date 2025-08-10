@@ -23,14 +23,19 @@ section {
 
 .navbar-section {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    background-color: white;
-    z-index: 100;
+    background-color: #fff;
+    z-index: 1030;
+    padding: 6px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 /* Main content spacing to account for fixed navbar */
 main {
-    margin-top: 80px;
+    margin-top: 72px;
 }
 
 /* Blog styling improvements */
@@ -66,17 +71,15 @@ main {
     padding-bottom: 0.5rem;
 }
 
-.navbar-brand {
-    width: 30%;
-}
+.navbar-brand { flex: 0 0 auto; }
+.navbar-collapse { flex: 1; }
 
-.navbar-brand img {
-    width: 100px;
-}
+/* Tighter navbar height and logo size */
+.navbar { padding-top: 6px; padding-bottom: 6px; }
+.navbar-brand img { height: 40px; width: auto; }
 
-.navbar-collapse {
-    width: 50%;
-}
+/* Normalize nav-link padding to avoid vertical growth */
+.navbar-nav .nav-link { padding: 6px 10px; }
 
 
 .navbar-nav li {
@@ -94,12 +97,30 @@ main {
     object-fit: cover;
     height: 100vh;
     width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure video fills container properly */
+.sec-banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0 !important;
 }
 
 @media (max-width: 768px) {
+    main { margin-top: 64px; }
+    .navbar-brand img { height: 32px; }
+    .navbar { padding-top: 6px; padding-bottom: 6px; }
     .bnr-img video {
         height: 50vh;
         object-fit: cover;
+    }
+    
+    .sec-banner {
+        height: 50vh;
     }
 }
 

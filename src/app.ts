@@ -50,30 +50,28 @@ class App {
     this.app.use(securityHeaders);
     this.app.use(cors(corsOptions));
     
-    // Rate limiting - Different limits for different routes
-    this.app.use('/assets', assetRateLimiter); // More lenient for static assets
-    this.app.use('/uploads', assetRateLimiter); // More lenient for uploads
-    this.app.use(rateLimiter); // Standard rate limiting for all other routes
+    // Rate limiting removed for unrestricted access
+    // Note: All rate limiters have been disabled
     
     // Compression
     this.app.use(compression());
     
-    // Body parsing
-    this.app.use(express.json({ limit: '10mb' }));
-    this.app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+    // Body parsing - Increased limits for larger requests
+    this.app.use(express.json({ limit: '50mb' }));
+    this.app.use(express.urlencoded({ extended: true, limit: '50mb' }));
     
     // Cookie parsing
     this.app.use(cookieParser());
     
-    // Session management
+    // Session management - More permissive settings
     this.app.use(session({
       secret: config.session.secret,
-      resave: false,
-      saveUninitialized: false,
+      resave: true, // Allow session to be saved even if not modified
+      saveUninitialized: true, // Allow uninitialized sessions to be saved
       cookie: {
-        secure: config.nodeEnv === 'production',
-        httpOnly: true,
-        maxAge: config.session.maxAge
+        secure: false, // Allow non-HTTPS cookies
+        httpOnly: false, // Allow client-side access to cookies
+        maxAge: config.session.maxAge * 10 // Extended session lifetime (10x longer)
       }
     }));
     
@@ -120,8 +118,9 @@ class App {
     this.app.engine('hbs', engine({
       extname: '.hbs',
       defaultLayout: 'main',
-      layoutsDir: path.join(__dirname, 'views/layouts'),
-      partialsDir: path.join(__dirname, 'views/partials'),
+      // Resolve views from configured path to work from dist
+      layoutsDir: path.join(config.paths.views, 'layouts'),
+      partialsDir: path.join(config.paths.views, 'partials'),
       helpers: {
         eq: (a: any, b: any) => a === b,
         ne: (a: any, b: any) => a !== b,
@@ -146,7 +145,8 @@ class App {
     }));
     
     this.app.set('view engine', 'hbs');
-    this.app.set('views', path.join(__dirname, 'views'));
+    // Use configured views path
+    this.app.set('views', config.paths.views);
     
     logger.info('Template engine initialized successfully');
   }

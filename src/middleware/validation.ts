@@ -3,16 +3,17 @@ import { Request, Response, NextFunction } from 'express';
 import { validateEmail, validateMobile, hasProhibitedContent } from '../utils/helpers';
 
 /**
- * Contact form validation middleware
+ * Contact form validation middleware - RELAXED
+ * Validation rules have been made more permissive
  */
 export const validateContactForm = [
   body('name')
     .notEmpty()
     .withMessage('Please enter your Name')
-    .isLength({ min: 2, max: 50 })
-    .withMessage('Name must be between 2 and 50 characters')
-    .matches(/^[a-zA-Z\s]+$/)
-    .withMessage('Name can only contain letters and spaces'),
+    .isLength({ min: 1, max: 100 }) // Increased max length, reduced min
+    .withMessage('Name must be between 1 and 100 characters')
+    .matches(/^[a-zA-Z\s\-\.\']+$/) // Allow more characters (hyphens, periods, apostrophes)
+    .withMessage('Name can contain letters, spaces, hyphens, periods, and apostrophes'),
 
   body('email')
     .notEmpty()
@@ -22,50 +23,46 @@ export const validateContactForm = [
     .normalizeEmail(),
 
   body('phone')
-    .notEmpty()
-    .withMessage('Please enter your phone number')
+    .optional({ checkFalsy: true }) // Make phone optional, treat empty string as undefined
     .custom((value) => {
-      if (!validateMobile(value)) {
-        throw new Error('Enter 10 digit mobile number');
+      if (value && !validateMobile(value)) {
+        throw new Error('Enter valid mobile number');
       }
       return true;
     }),
 
   body('type')
-    .notEmpty()
-    .withMessage('Please select construction type')
-    .isIn(['residential', 'commercial'])
-    .withMessage('Invalid construction type'),
+    .optional({ checkFalsy: true }) // Make type optional
+    .isIn(['residential', 'commercial', 'other']) // Added 'other' option
+    .withMessage('Please select a valid construction type'),
 
   body('plotsize')
-    .notEmpty()
-    .withMessage('Please enter your plot size')
-    .isLength({ min: 1, max: 100 })
-    .withMessage('Plot size must be between 1 and 100 characters'),
+    .optional({ checkFalsy: true }) // Make plot size optional
+    .isLength({ min: 1, max: 200 }) // Increased max length
+    .withMessage('Plot size must be between 1 and 200 characters'),
 
   body('message')
     .optional()
-    .isLength({ max: 200 })
-    .withMessage('Characters limit 200 only')
+    .isLength({ max: 1000 }) // Increased message limit from 200 to 1000
+    .withMessage('Message too long (max 1000 characters)')
     .custom((value) => {
-      if (value && hasProhibitedContent(value)) {
-        throw new Error('Invalid Message');
-      }
+      // Remove prohibited content check for more flexibility
       return true;
     }),
 ];
 
 /**
- * Career form validation middleware
+ * Career form validation middleware - RELAXED
+ * Validation rules have been made more permissive
  */
 export const validateCareerForm = [
   body('name')
     .notEmpty()
     .withMessage('Please enter your Name')
-    .isLength({ min: 2, max: 50 })
-    .withMessage('Name must be between 2 and 50 characters')
-    .matches(/^[a-zA-Z\s]+$/)
-    .withMessage('Name can only contain letters and spaces'),
+    .isLength({ min: 1, max: 100 }) // Increased max length, reduced min
+    .withMessage('Name must be between 1 and 100 characters')
+    .matches(/^[a-zA-Z\s\-\.\']+$/) // Allow more characters
+    .withMessage('Name can contain letters, spaces, hyphens, periods, and apostrophes'),
 
   body('email')
     .notEmpty()
@@ -75,41 +72,35 @@ export const validateCareerForm = [
     .normalizeEmail(),
 
   body('phone')
-    .notEmpty()
-    .withMessage('Please enter your phone number')
+    .optional({ checkFalsy: true }) // Make phone optional, treat empty string as undefined
     .custom((value) => {
-      if (!validateMobile(value)) {
-        throw new Error('Enter 10 digit mobile number');
+      if (value && !validateMobile(value)) {
+        throw new Error('Enter valid mobile number');
       }
       return true;
     }),
 
   body('city')
-    .notEmpty()
-    .withMessage('Please enter your city')
-    .isLength({ min: 2, max: 50 })
-    .withMessage('City must be between 2 and 50 characters'),
+    .optional({ checkFalsy: true }) // Make city optional
+    .isLength({ min: 1, max: 100 }) // Increased max length
+    .withMessage('City must be between 1 and 100 characters'),
 
   body('post')
-    .notEmpty()
-    .withMessage('Please select a position')
-    .isIn(['Sales', 'Architect', 'Jr. Architect', 'Project Manager', 'Supervisor', 'Site engineer'])
+    .optional({ checkFalsy: true }) // Make position optional
+    .isIn(['Sales', 'Architect', 'Jr. Architect', 'Project Manager', 'Supervisor', 'Site engineer', 'Other'])
     .withMessage('Invalid position selected'),
 
   body('experience')
-    .notEmpty()
-    .withMessage('Please select your experience level')
-    .isIn(['Less than 2 Years', '2-5 Years', 'More than 5 Years'])
+    .optional({ checkFalsy: true }) // Make experience optional
+    .isIn(['Less than 2 Years', '2-5 Years', 'More than 5 Years', 'Not specified'])
     .withMessage('Invalid experience level'),
 
   body('message')
     .optional()
-    .isLength({ max: 500 })
-    .withMessage('Message too long (max 500 characters)')
+    .isLength({ max: 2000 }) // Increased message limit from 500 to 2000
+    .withMessage('Message too long (max 2000 characters)')
     .custom((value) => {
-      if (value && hasProhibitedContent(value)) {
-        throw new Error('Invalid Message');
-      }
+      // Remove prohibited content check for more flexibility
       return true;
     }),
 ];
@@ -142,17 +133,28 @@ export const handleValidationErrors = (req: Request, res: Response, next: NextFu
 };
 
 /**
- * File upload validation for resume
+ * File upload validation for resume - RELAXED
+ * File upload validation has been made more permissive
  */
 export const validateResumeUpload = (req: Request, res: Response, next: NextFunction): void => {
   if (req.file) {
-    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    const maxSize = 5 * 1024 * 1024; // 5MB
+    // Allow more file types including images and text files
+    const allowedTypes = [
+      'application/pdf', 
+      'application/msword', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'text/plain',
+      'application/rtf',
+      'image/jpeg',
+      'image/jpg',
+      'image/png'
+    ];
+    const maxSize = 25 * 1024 * 1024; // 25MB (increased from 5MB)
     
     if (!allowedTypes.includes(req.file.mimetype)) {
       res.status(400).json({
         success: false,
-        message: 'Only PDF and DOC files are allowed'
+        message: 'Allowed file types: PDF, DOC, DOCX, TXT, RTF, JPG, JPEG, PNG'
       });
       return;
     }
@@ -160,7 +162,7 @@ export const validateResumeUpload = (req: Request, res: Response, next: NextFunc
     if (req.file.size > maxSize) {
       res.status(400).json({
         success: false,
-        message: 'File size must be less than 5MB'
+        message: 'File size must be less than 25MB'
       });
       return;
     }

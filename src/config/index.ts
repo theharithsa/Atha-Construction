@@ -29,16 +29,16 @@ export const config = {
     domain: process.env.FORM_DOMAIN || 'athaconstruction.in',
   },
 
-  // Session Configuration
+  // Session Configuration - Extended for longer sessions
   session: {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-this',
-    maxAge: parseInt(process.env.SESSION_MAX_AGE || '86400000', 10),
+    maxAge: parseInt(process.env.SESSION_MAX_AGE || '864000000', 10), // 10 days (increased from 1 day)
   },
 
-  // Security Configuration
+  // Security Configuration - Rate limiting disabled
   security: {
-    rateLimitWindowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000', 10),
-    rateLimitMaxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '100', 10),
+    rateLimitWindowMs: 0, // Rate limiting disabled
+    rateLimitMaxRequests: 0, // Rate limiting disabled
   },
 
   // Firebase Configuration (Optional)
@@ -66,7 +66,8 @@ export const config = {
   // Static files and views
   paths: {
     static: path.join(__dirname, '../../public'),
-    views: path.join(__dirname, '../views'),
+    // Point to the source views so templates are found when running from dist
+    views: path.join(__dirname, '../../src/views'),
     uploads: path.join(__dirname, '../../uploads'),
   },
 };

@@ -11,18 +11,27 @@ import { config } from '../config';
 
 const router = Router();
 
-// Configure multer for file uploads
+// Configure multer for file uploads - Increased limits and more file types
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
-    fileSize: 5 * 1024 * 1024, // 5MB limit
+    fileSize: 25 * 1024 * 1024, // 25MB limit (increased from 5MB)
   },
   fileFilter: (req, file, cb) => {
-    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const allowedTypes = [
+      'application/pdf', 
+      'application/msword', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'text/plain',
+      'application/rtf',
+      'image/jpeg',
+      'image/jpg',
+      'image/png'
+    ];
     if (allowedTypes.includes(file.mimetype)) {
       cb(null, true);
     } else {
-      cb(new Error('Only PDF and DOC files are allowed'));
+      cb(new Error('Allowed file types: PDF, DOC, DOCX, TXT, RTF, JPG, JPEG, PNG'));
     }
   }
 });
