@@ -60,7 +60,7 @@ export const config = {
   // Analytics Configuration
   analytics: {
     gaTrackingId: process.env.GA_TRACKING_ID || 'G-GNYXP1XF3S',
-    gtmId: process.env.GTM_ID || 'GTM-NJ9ZQFZG',
+    gtmId: process.env.GTM_ID || 'GTM-K573RZP7', // Updated with new GTM ID
   },
 
   // Redis Configuration
