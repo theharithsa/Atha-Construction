@@ -1,0 +1,92 @@
+<section class="sec-banner">
+    <div class="bnr-img">
+        <img src="{{baseUrl}}/assets/images/contact-us.jpg" class="w-100" alt="Best Construction Companies in Bangalore" title="Best Construction Companies in Bangalore">
+        <div class="bg-bnr-layer"></div>
+        <div class="baner-cont-abs1 d-lg-block d-none">
+            <h1>{{meta.h1}}</h1>
+        </div>
+    </div>
+</section>
+
+<section class="sec bg-dark text-center text-white" id="next-section">
+    <div class="py-5">
+        <div class="container">
+            <h2 class="mn-hed">Contact Us</h2>
+            
+            <div class="form-cont pt-4">
+                <form role="form" name="form1" method="post" id="contact-form" action="{{baseUrl}}/contact">
+                    <div id="contact-note"></div>
+                    
+                    <div class="nam-mob">
+                        <div class="mb-2 inp-inner">
+                            <input type="text" name="name" class="ps-0 form-control" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="mb-2 inp-inner">
+                            <div class="input-group">
+                                <input type="tel" name="phone" placeholder="Phone No." class="form-control ps-0" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <input type="email" name="email" class="form-control ps-0" placeholder="Enter email" required>
+                    </div>
+                    
+                    <div class="mb-2 pt-3 text-start">
+                        <label for="type" class="typ-lab">What kind of construction are you looking for?</label>
+                        <select name="type" class="w-100 text-white drp-dwn pt-2" id="type" required>
+                            <option class="text-dark drp-dwn" value="residential">Residential</option>
+                            <option class="text-dark drp-dwn" value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-2 inp-inner">
+                        <input type="text" name="plotsize" class="ps-0 form-control" placeholder="Plot size ?" required>
+                    </div>
+                    
+                    <div class="mb-2 inp-inner">
+                        <textarea name="message" class="ps-0 form-control" placeholder="Message (Optional)" rows="4" maxlength="200"></textarea>
+                    </div>
+                    
+                    <input type="submit" id="contact-btn" name="Submit" class="btn footer-sub" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const submitBtn = document.getElementById('contact-btn');
+    const noteDiv = document.getElementById('contact-note');
+    
+    // Disable submit button
+    submitBtn.disabled = true;
+    submitBtn.value = 'Sending...';
+    
+    try {
+        const response = await fetch('{{baseUrl}}/contact', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const result = await response.text();
+        
+        if (response.ok && result === 'OK') {
+            noteDiv.innerHTML = '<p style="color:green;width:100%;">Thank you for your enquiry. We will get back to you soon!</p>';
+            this.reset();
+        } else {
+            noteDiv.innerHTML = result;
+        }
+    } catch (error) {
+        noteDiv.innerHTML = '<p style="color:red;width:100%;">Failed to send your enquiry. Please try again later.</p>';
+    } finally {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.value = 'Submit';
+    }
+});
+</script>

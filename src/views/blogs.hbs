@@ -1,0 +1,32 @@
+<section class="sec-banner">
+    <div class="bnr-img">
+        <img src="{{baseUrl}}/assets/images/blog-header-image.jpg" class="w-100" alt="Building Contractors in Bangalore" title="Building Contractors in Bangalore">
+        <div class="bg-bnr-layer"></div>
+        <div class="baner-cont-abs1 d-lg-block d-none">
+            <h1>Blogs</h1>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 blogs" id="next-section">
+    <div class="container px-2 px-md-5">
+        <div class="main-heading text-center mb-4">
+            <h2 class="fs-1">LATEST NEWS</h2>
+            <p class="text-center">See what the press has to say.</p>
+        </div>
+        
+        <div class="row">
+            {{#each blogPosts}}
+                <div class="col-md-4 mb-5">                        
+                    <img src="{{../baseUrl}}/{{this.image}}" alt="{{this.alt}}" class="img-fluid">
+                    <div class="inner-blog-box">    
+                        <h6>{{formatDate this.date}}</h6>
+                        <h4>{{this.title}}</h4>
+                        <p>{{this.excerpt}}</p>
+                        <a href="{{../baseUrl}}/blog/{{this.slug}}" class="btn-theme-dark text-uppercase">Read More</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

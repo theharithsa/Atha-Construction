@@ -1,0 +1,439 @@
+<section class="sec-banner">
+    <div class="bnr-img">
+        <img src="{{baseUrl}}/assets/images/properties/banner.png" class="w-100" alt="Home Construction In Bangalore" title="Home Construction In Bangalore">
+
+        <div class="bg-bnr-layer">
+
+        </div>
+
+        <div class="baner-cont-abs1 d-lg-block d-none">
+            
+            <h1>{{meta.h1}}</h1>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="sec pck-sec text-center py-5" id="next-section">
+    <div class="pck-sec-2">
+        <div class="container">
+            <h2 class="mn-hed">
+                PACKAGES
+            </h2>
+
+            <p class="cm-fnt">
+                Quality, Value and Service have been our hallmarks. Our packages follow the same philosophy where care is taken to ensure customization without compromising on quality. Home construction is easy with us. We have it all!
+            </p>
+
+            <div class="containers">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="{{baseUrl}}/assets/images/properties/container-1.png" class="w-100 cont-1" alt="Atha Construction Packages" title="Atha Construction Packages" onclick="showModel()">
+                    </div>
+                    
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="{{baseUrl}}/assets/images/properties/container-2.png" class="w-100 cont-2" alt="Construction Companies In Bangalore"
+                            onclick="showModel1()" title="Construction Companies In Bangalore">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- Budget Package Popup -->
+<div id="overlay"></div>
+<div id="popUp">
+    <div class="pop-upcont text-light p-5">
+        <button onclick="closeModel()" class="close-btn">
+            <span>
+                X
+            </span>
+        </button>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-lg-4 bud-con">
+                <p class="pop-budNa mb-0">
+                    BUDGET PACKAGE
+                </p>
+                <p class="pop-pric mb-0">
+                    ₹2799
+                </p>
+               
+            </div>
+
+            <div class="col-lg-4">
+                <ul class="ser-ul">
+                    <li>Design & Drawings</li>
+                    <li>Core Construction Materials</li>
+                    <li>Architecture Detailing</li>
+                    <li>Flooring & Wall Tiling</li>
+                    <li>Painting</li>
+                    <li>Electricals</li>
+                    <li>Plumbing</li>
+                    <li>Doors</li>
+                    <li>Windows</li>
+                    <li>Kitchen & Bathroom Fixtures</li>
+                    <li>Fabrication Works</li>
+                    <li>Warranty Period</li>
+                    <li> Extra Charges </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <button class="pop-btn d-block mx-auto">
+                  <a href="{{baseUrl}}/contact" class="text-dark" style="text-decoration:none;">Enquire Now</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Customize Package Popup -->
+<div id="overlay1"></div>
+<div id="popUp1">
+    <div class="pop-upcont text-light p-lg-5">
+        <button onclick="closeModel1()" class="close-btn">
+            <span>
+                X
+            </span>
+        </button>
+        <div class="row d-flex align-items-center justify-content-center">
+           
+            <p class="pop-budNa mb-0 text-center fs-4 mb-4">
+                    CUSTOMIZE YOUR PACKAGE
+                </p>
+
+            <div class="col-lg-6 ">
+            <form role="form" name="form1" method="post" id="footer-popup" action="{{baseUrl}}/contact">
+
+                <div id="footer-note"></div>
+
+                                <div class="nam-mob">
+                                    <div class="mb-2 inp-inner">
+
+                                        <input type="text" name="name" class="ps-0 form-control" placeholder="Enter Your Name" required="">
+
+                                    </div>
+                                    <div class="mb-2 inp-inner">
+
+                                        <div class="input-group">
+
+                                            <input type="tel" name="phone" placeholder="Phone No." class="form-control ps-0" value="" required="">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="mb-2">
+
+                                    <input type="email" name="email" class="form-control ps-0" placeholder="Enter email">
+
+                                </div>
+
+                                <div class="mb-2 pt-3">
+                                    <label for="type" class="typ-lab">What kind of construction are you looking for ?</label>
+                                        <select name="type" class=" w-100 text-white drp-dwn pt-2" id="type">
+                                            <option  class="text-dark drp-dwn" value="residential">Residential</option>
+                                            <option  class="text-dark drp-dwn" value="commercial">Commercial</option>
+                                            
+                                        </select>
+
+                                </div>
+
+                                <div class="mb-2 inp-inner">
+
+                                    <input type="text" name="plotsize" class="ps-0 form-control" placeholder="Plot size ?" required="">
+
+                                </div>
+
+                                <input type="hidden" name="subject" value="Package Customization Request">
+                                <input type="submit" id="footer-btn" name="Submit" class="btn footer-sub mt-3" value="Submit">
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Luxury Package Popup -->
+<div id="overlay2"></div>
+<div id="popUp2">
+    <div class="pop-upcont text-light p-5">
+        <button onclick="closeModel2()" class="close-btn">
+            <span>
+                X
+            </span>
+        </button>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-lg-4 bud-con">
+                <p class="pop-budNa mb-0">
+                LUXURY PACKAGE
+                </p>
+                <p class="pop-pric mb-0">
+                ₹2450
+                </p>
+                <p class="inc-tx mb-0">
+                    Inclusive of Tax
+                    Save $30
+                </p>
+            </div>
+
+            <div class="col-lg-4">
+                <ul class="ser-ul">
+                    <li>Design & Drawings</li>
+                    <li>Core Construction Materials</li>
+                    <li>Architecture Detailing</li>
+                    <li>Flooring & Wall Tiling</li>
+                    <li>Painting</li>
+                    <li>Electricals</li>
+                    <li>Plumbing</li>
+                    <li>Doors</li>
+                    <li>Windows</li>
+                    <li>Kitchen & Bathroom Fixtures</li>
+                    <li>Fabrication Works</li>
+                    <li>Warranty Period</li>
+                    <li> Extra Charges </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <button class="pop-btn d-block mx-auto">
+                    <a href="{{baseUrl}}/contact" class="text-dark" style="text-decoration:none;">Select</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Package popup functions
+    function showModel() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popUp').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModel() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popUp').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function showModel1() {
+        document.getElementById('overlay1').style.display = 'block';
+        document.getElementById('popUp1').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModel1() {
+        document.getElementById('overlay1').style.display = 'none';
+        document.getElementById('popUp1').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function showModel2() {
+        document.getElementById('overlay2').style.display = 'block';
+        document.getElementById('popUp2').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModel2() {
+        document.getElementById('overlay2').style.display = 'none';
+        document.getElementById('popUp2').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close popups when clicking overlay
+    document.getElementById('overlay').addEventListener('click', closeModel);
+    document.getElementById('overlay1').addEventListener('click', closeModel1);
+    document.getElementById('overlay2').addEventListener('click', closeModel2);
+
+    // Form submission handling
+    document.getElementById('footer-popup').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        fetch('{{baseUrl}}/contact', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('footer-note').innerHTML = '<div class="alert alert-success">Thank you! Your package customization request has been submitted.</div>';
+                this.reset();
+            } else {
+                document.getElementById('footer-note').innerHTML = '<div class="alert alert-danger">Error: ' + (data.message || 'Please try again.') + '</div>';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('footer-note').innerHTML = '<div class="alert alert-danger">Error submitting form. Please try again.</div>';
+        });
+    });
+</script>
+
+<style>
+    /* Package popup styles */
+    #overlay, #overlay1, #overlay2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        display: none;
+    }
+
+    #popUp, #popUp1, #popUp2 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1001;
+        display: none;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+    }
+
+    .pop-upcont {
+        position: relative;
+        color: white;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .close-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+
+    .pop-budNa {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffd700;
+    }
+
+    .pop-pric {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ff00;
+    }
+
+    .inc-tx {
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+
+    .ser-ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .ser-ul li {
+        padding: 5px 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .ser-ul li:before {
+        content: "✓ ";
+        color: #00ff00;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .pop-btn {
+        background: #ffd700;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .pop-btn:hover {
+        background: #ffed4e;
+    }
+
+    .typ-lab {
+        color: white;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .drp-dwn {
+        background: #444;
+        color: white;
+        border: 1px solid #666;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .footer-sub {
+        background: #ffd700;
+        color: #333;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .footer-sub:hover {
+        background: #ffed4e;
+    }
+
+    .inp-inner input, .form-control {
+        background: #555;
+        border: 1px solid #666;
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .inp-inner input::placeholder, .form-control::placeholder {
+        color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+        #popUp, #popUp1, #popUp2 {
+            width: 95%;
+            height: 90%;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .pop-upcont {
+            padding: 20px 10px;
+        }
+    }
+</style>

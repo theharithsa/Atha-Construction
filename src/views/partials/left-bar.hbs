@@ -1,0 +1,27 @@
+<div class="col-md-3">
+    <div class="border px-3 py-3">
+        <h4 class="sidebar__widget-title">Latest Posts</h4>
+
+        <div class="sidebar__post-list my-3">
+            {{#each recentBlogPosts}}
+                <div class="sidebar__post-item mb-4">
+                    <div class="sidebar__post-thumb">
+                        <!-- Link to the blog post detail page -->
+                        <a href="{{../baseUrl}}/blog/{{this.slug}}" class="text-dark">
+                            <!-- Blog post thumbnail -->
+                            <img src="{{../baseUrl}}/{{this.image}}" alt="{{this.title}}" class="img-fluid mb-3">
+                        </a>
+                    </div>
+                    <div class="sidebar__post-content">
+                        <!-- Blog post title -->
+                        <h5 class="title">
+                            <a class="text-decoration-none text-dark" href="{{../baseUrl}}/blog/{{this.slug}}" class="text-dark mt-2 font-15">{{this.title}}</a>
+                        </h5>
+                        <!-- Blog post date -->
+                        <span class="date font-15"><i class="flaticon-time"></i>{{formatDate this.date}}</span>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

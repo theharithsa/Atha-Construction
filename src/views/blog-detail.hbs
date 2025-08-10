@@ -1,0 +1,33 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-12 px-3 px-md-5">
+                        <div class="gallery-item">
+                            <img 
+                                src="{{baseUrl}}/{{post.image}}" 
+                                alt="{{post.title}}" 
+                                class="img-fluid mb-3 w-100" 
+                                style="max-height:650px !important">
+                            <div class="title text-left">
+                                <h1 class="text-dark mt-2 fs-2">{{post.h1}}</h1>
+                            </div>
+                            <div class="text-dark mt-2">
+                                {{#if post.author}}
+                                <div class="blog-meta mb-3">
+                                    <small class="text-muted">
+                                        Published on {{formatDate post.date}} by {{post.author}}
+                                    </small>
+                                </div>
+                                {{/if}}
+                                {{{post.content}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> left-bar}}
+        </div>
+    </div>
+</section>

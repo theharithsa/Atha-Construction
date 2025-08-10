@@ -1,0 +1,798 @@
+<?php
+$valid_pages = ['atha', 'about', 'packages', 'properties', 'careers', 'contact'];
+
+if (in_array($current_page, $valid_pages)): ?>
+
+<section class="testimonial overflow-hidden py-5 d-none">
+    <div class="container">
+
+        <h2 class="mn-hed text-center">
+            WHAT OUR CLIENT's SAY ?
+        </h2>
+        <div class="owlslider owl-carousel owl-theme pt-5" id="testimonial-owl">
+            <div class="item">
+                <div class="testimonial-content text-center">
+                    <i class="fa  fa-solid fa-quote-left text-dark"></i>
+                    <p>"Atha Construction delivered beyond our expectations! The attention to detail and quality of work are truly commendable. From design to execution, the team ensured everything was seamless and hassle-free. Highly recommend them for any construction needs!"</p>
+                    <span class="user-name">– Rahul Mehta, Bengaluru</span>
+                </div>
+            </div>
+           
+
+            <div class="item">
+                <div class="testimonial-content text-center">
+                    <i class="fa  fa-solid fa-quote-left text-dark"></i>
+                    <p>"We were impressed by the professionalism and punctuality of Atha Construction. Our project was completed right on time without compromising on quality. Their commitment to on-time delivery is unmatched!"</p>
+                    <span class="user-name">- Suhasini Rao, Mysuru</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-content text-center">
+                    <i class="fa  fa-solid fa-quote-left text-dark"></i>
+                    <p>"Atha Construction stands out for its transparency and honest approach. The team kept us updated at every stage, ensuring complete peace of mind. Their ESCROW facility was a game-changer for us!"</p>
+                    <span class="user-name">- Dinesh Kulkarni, Ballari</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-content text-center">
+                    <i class="fa  fa-solid fa-quote-left text-dark"></i>
+                    <p>"Choosing Atha Construction was the best decision we made. Their use of advanced technology and sustainable practices not only met our requirements but exceeded them. We now have a beautiful, eco-friendly home that we love!"</p>
+                    <span class="user-name">- Ananya Singh, Bengaluru</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-content text-center">
+                    <i class="fa  fa-solid fa-quote-left text-dark"></i>
+                    <p>"Atha Construction's dedication to client satisfaction is remarkable. They went the extra mile to address every concern and delivered a space that perfectly matches our vision. A reliable partner for any project!"</p>
+                    <span class="user-name">- Ravi Shetty, Mysuru</span>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+
+<section class="bg-dark text-white py-5 d-flex justify-content-center">
+    <div class="container px-lg-5 mx-lg-5 ">
+        <h2 class="mn-hed text-center pb-4">
+            OUR BLOG
+        </h2>
+
+        <?php $loop_index = 0; ?>
+        <?php foreach ($blog_posts as $slug => $post): ?>
+            <?php if ($loop_index === 0): // First blog post ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blg-1 pos-rel">
+                            <img src="<?= htmlspecialchars($post['image']) ?>" class="w-100" alt="<?= htmlspecialchars($post['alt']) ?>">
+                            <div class="abs-blog text-center">
+                                <a href="<?= BASE_URL . 'blog/' . htmlspecialchars($post['slug']) ?>" class="text-decoration-none text-white">
+                                    <?= htmlspecialchars($post['title']) ?>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php elseif ($loop_index === 1): // Start new row for remaining posts ?>
+                <div class="row mt-4">
+            <?php endif; ?>
+
+            <?php if ($loop_index > 0): // Remaining posts (2nd post onwards) ?>
+                <div class="col-lg-6 pos-rel">
+                    <img src="<?= htmlspecialchars($post['image']) ?>" class="w-100 blg-2" alt="<?= htmlspecialchars($post['alt']) ?>">
+                    <div class="abs-blog">
+                        <a href="<?= BASE_URL . 'blog/' . htmlspecialchars($post['slug']) ?>" class="text-decoration-none text-white">
+                            <?= nl2br(htmlspecialchars($post['title'])) ?>
+                        </a>
+                    </div>
+                </div>
+
+                <?php if ($loop_index === count($blog_posts) - 1): // Close row after the last post ?>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+            
+            <?php $loop_index++; ?>
+        <?php endforeach; ?>
+
+
+
+
+
+        <!--<div class="blg-1 pos-rel">
+            <img src="assetes/images/blog-1.png" class="w-100" alt="">
+            <div class="abs-blog text-center">
+                Business Insider: Celebrity Real Estate Agent, Tomer Fridman, Outlines the 3 Features That
+                Make Luxury Properties Stand Out
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-6 pos-rel">
+                <img src="assetes/images/blog-2.jpeg" class="w-100 blg-2" alt="">
+                <div class="abs-blog">
+                    The Wallstreet Journal Features 1471 Forest
+                    Knoll
+                </div>
+            </div>
+
+            <div class="col-lg-6 pos-rel">
+                <img src="assetes/images/blog-3.png" class="w-100 blg-2" alt="">
+                <div class="abs-blog">
+                    Architectural Digest: Tour a Midcentury- <br>
+                    Inspired Hollywood Hills Idyll Listed by Tomer…
+                </div>
+            </div>
+
+        </div>-->
+        <div class="text-center mt-5">
+            <a class="cm-bt1 text-decoration-none text-white" href="blogs">
+                VIEW ALL
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="work-with pos-rel">
+    <img src="<?php echo BASE_URL; ?>assetes/images/Careers.png" class="w-100 pos-rel d-none d-md-block" alt="best house construction companies in bangalore" title="best house construction companies in bangalore">
+    <div class="wwu-abs container text-center">
+        <h2 class="mn-hed text-center pb-4">
+            WORK WITH US
+        </h2>
+        <p class="cm-fnt">
+
+            Our goal is to offer an unparalleled level of service to our highly respected clients. Whether you are looking to buy or sell your home,
+            we guarantee that our expertise, professionalism and dedication will guide you toward meeting your unique real estate needs.
+
+        </p>
+        <button class="cm-bt1 d-block mx-auto mt-5 ">
+            CONTACT US
+        </button>
+
+    </div>
+</section>
+
+<section class="faq-section py-5">
+    <div class="container">
+        <h2 class="text-center mn-hed mb-5">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+                    <!-- Question 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button text-light bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What services does your construction company provide?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a wide range of services, including residential and commercial construction, remodeling, renovations, project management, and custom design-build services.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingLeven">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeven" aria-expanded="false" aria-controls="collapseLeven">
+                            Do you intervene client in selection of Materials ? 
+                            </button>
+                        </h2>
+                        <div id="collapseLeven" class="accordion-collapse collapse" aria-labelledby="headingLeven" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                            Yes, we do.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Are you licensed and insured?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we are fully licensed, bonded, and insured to ensure compliance with local regulations and to provide peace of mind to our clients.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How long has your company been in business?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our company has been serving the community for 6 years, delivering high-quality construction projects tailored to our clients' needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Do you provide free project estimates?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we provide free and detailed project estimates to help you understand the scope and budget of your project.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What areas do you serve?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We serve Bangalore. If you're unsure whether we cover your area, feel free to contact us.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                How long does it take to complete a construction project?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Project timelines vary based on the size, scope, and complexity of the project. Once we understand your requirements, we’ll provide a realistic timeline.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                What is the process for starting a construction project?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our process involves an initial consultation, site evaluation, design and planning, cost estimation, contract agreement, and project execution. We'll guide you every step of the way.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Can I make changes to the project once construction has started?
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, but changes may impact the timeline and cost. We’ll discuss any adjustments and ensure you’re informed before proceeding.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Do you handle all permits and approvals?
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we handle all necessary permits and approvals to ensure your project complies with local building codes and regulations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                How do you ensure the quality of your work?
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use premium materials, hire skilled professionals, and adhere to strict quality control measures throughout the project.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php endif; ?>
+
+<section class="footer py-5">
+
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-4 text-white">
+                <img src="<?php echo BASE_URL; ?>assetes/images/footer-logo.png" class="ftr-logo" alt="Atha construction in bangalore" title="Atha construction in bangalore"> 
+
+                <p class="ftr-hed">
+                    Bangalore
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<a href="https://maps.app.goo.gl/G8Ezuo2a8pbknSkk8" class="text-decoration-none text-white" target="_blank"> No.81/37, Ground Floor, The Hulkul, Lavelle Road, Bengaluru - 560001. </a>
+                </p>
+                <p class="ftr-hed">
+                    Ballari
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<a href="https://maps.app.goo.gl/MdQ2gi2iPGKXQNn28" class="text-decoration-none text-white" target="_blank"> First Floor, PVR Plaza, No 7, 3rd Cross Rd, Nehru Colony, Sidiginamola, Ballari, Karnataka 583103. </a>
+                </p>
+
+                <p class="ftr-hed">
+                Mysore
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<a href="#" class="text-decoration-none text-white" target="_blank"> VIJAY ARCADE, # 1714 Sarvodaya Road E&F Block Ramkrishna Nagar  (kuvempu Nagar), Mysore 570009 </a>
+                </p>
+
+                <p class="ftr-hed">
+                    Contact Us
+                </p>
+                <!--<p>
+                    <a href="tel:+08049776616" class="text-decoration-none text-white">
+                        <i class="fas fa-phone"></i> Landline – 08049776616
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:+9606956044 " class="text-decoration-none text-white">
+                        <i class="fas fa-mobile-alt"></i> Mobile Number – 9606956044 
+                    </a>
+                </p>-->
+
+                <p>
+                    <a href="mailto: info@athaconstruction.in" class="text-decoration-none text-white">
+                        <i class="fas fa-envelope"></i>  info@athaconstruction.in
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:+91 8049776616 " class="text-decoration-none text-white">
+                        <i class="fa-solid fa-phone"></i>+91 8049776616 
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+91 9606956044 " class="text-decoration-none text-white">
+                        <i class="fa-solid fa-phone"></i>+91 9606956044 
+                    </a>
+                </p>
+
+                
+
+
+
+            </div>
+
+
+            <div class="col-lg-4 ps-5">
+
+                <ul class="">
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>">
+                            HOME
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>about">
+                            ABOUT
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>properties">
+                            PROPERTIES
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>packages">
+                            PACKAGES
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>careers">
+                            CAREERS
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>blogs">
+                            BLOGS
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="<?php echo BASE_URL; ?>contact">
+                            CONTACT US
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="social-media">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=61569376468425" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/atha_construction/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/athaconstruction.in/" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4 text-white">
+                <h4>
+                    ENQUIRY FORM
+                </h4>
+
+
+                <div class="footer_form">
+
+
+
+
+                    <div class="form_inner foter-form pt-2">
+
+                        <form role="form" name="form1" method="post" id="footer-form">
+
+                            <div id="footer-note"></div>
+
+                            <div class="nam-mob">
+                                <div class="mb-2 inp-inner">
+
+                                    <input type="text" name="name" class="ps-0 form-control" placeholder="Enter Your Name" required="">
+
+                                </div>
+                                <div class="mb-2 inp-inner">
+
+                                    <div class="input-group">
+
+                                        <input type="tel" name="phone" placeholder="Phone No." class="form-control ps-0" value="" required="">
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="mb-2">
+
+                                <input type="email" name="email" class="form-control ps-0" placeholder="Enter email">
+
+                            </div>
+
+                            <div class="mb-2 pt-3">
+                                <label for="type" class="typ-lab">What kind of construction are you looking for ?</label>
+                                    <select name="type" class=" w-100 text-white drp-dwn pt-2" id="type">
+                                        <option  class="text-dark drp-dwn" value="residential">Residential</option>
+                                        <option  class="text-dark drp-dwn" value="commercial">Commercial</option>
+                                        
+                                    </select>
+
+                            </div>
+
+                            <div class="mb-2 inp-inner">
+
+                                <input type="text" name="plotsize" class="ps-0 form-control" placeholder="Plot size ?" required="">
+
+                            </div>
+
+
+                            <input type="submit" id="footer-btn" name="Submit" class="btn footer-sub mt-3" value="Submit">
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- 
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAEpyMUKI8eH2xU7_3Ve3whYWs7dXWOrwI", 
+    authDomain: "atha-eb597.firebaseapp.com",
+    projectId: "atha-eb597",
+    storageBucket: "atha-eb597.firebasestorage.app",
+    messagingSenderId: "793772614946",
+    appId: "1:793772614946:web:45fb6b530052fbdc44b17b",
+    measurementId: "G-NR4CK21TCC"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+ -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<!--jquery cdn-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+<!-- fontawsom icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<!-- owl corosil -->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' rel='stylesheet'
+    media="print" onload="this.media='all'">
+
+<script defer src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var totalSteps = $(".steps li").length;
+
+        // Initialize the first step and form section
+        $(".steps li:nth-of-type(1)").addClass("active");
+        $(".myContainer .form-container:nth-of-type(1)").addClass("active");
+
+        let autoPlayInterval; // Interval for autoplay functionality
+
+        // Function to navigate to the next step
+        function goToNextStep() {
+            var currentIndex = $(".form-container.active").index();
+            if (currentIndex < totalSteps - 1) {
+                $(".steps li").eq(currentIndex + 1).addClass("active");
+                $(".form-container")
+                    .eq(currentIndex)
+                    .removeClass("active flipInX")
+                    .next()
+                    .addClass("active flipInX");
+            } else {
+                resetToFirstStep(); // Loop to the first step
+            }
+        }
+
+        // Function to reset to the first step
+        function resetToFirstStep() {
+            $(".steps li").removeClass("active");
+            $(".form-container").removeClass("active flipInX");
+            $(".steps li:nth-of-type(1)").addClass("active");
+            $(".form-container:nth-of-type(1)").addClass("active flipInX");
+        }
+
+        // Function to autoplay steps
+        function startAutoPlay() {
+            stopAutoPlay(); // Ensure no multiple intervals
+            autoPlayInterval = setInterval(goToNextStep, 1000); // Change step every 5 seconds
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Next button functionality
+        $(".form-container").on("click", ".next", function () {
+            stopAutoPlay(); // Stop autoplay on manual interaction
+            goToNextStep();
+        });
+
+        // Back button functionality
+        $(".form-container").on("click", ".back", function () {
+            stopAutoPlay(); // Stop autoplay on manual interaction
+            var currentIndex = $(".form-container.active").index();
+            if (currentIndex > 0) {
+                $(".steps li").eq(currentIndex).removeClass("active");
+                $(".form-container")
+                    .eq(currentIndex)
+                    .removeClass("active flipInX")
+                    .prev()
+                    .addClass("active flipInY");
+            }
+        });
+
+        // Step click functionality (optional)
+        $(".steps li").on("click", function () {
+            stopAutoPlay(); // Stop autoplay on manual interaction
+            var stepIndex = $(this).index();
+            $(".steps li").removeClass("active");
+            $(this).prevAll().addClass("active");
+            $(this).addClass("active");
+
+            $(".myContainer .form-container").removeClass("active flipInX");
+            $(".myContainer .form-container").eq(stepIndex).addClass("active flipInX");
+        });
+
+        // Start autoplay
+        startAutoPlay();
+    });
+
+    document.querySelector('.scroll-down').addEventListener('click', function () {
+        const nextSection = document.getElementById('next-section');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    $('.scroll-down').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('#next-section').offset().top - 75 // Adjust scroll position 100px above the target
+        }, 800); // Adjust the speed (800ms)
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const options = {
+            root: null, // Viewport is the root
+            threshold: 0.1, // Trigger when 10% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Select and animate left group paragraphs
+                    const leftGroup = entry.target.querySelectorAll(".animated-group-left p");
+                    leftGroup.forEach((p, index) => {
+                        setTimeout(() => {
+                            p.style.animation = `fadeInLeft 0.5s ease-out ${index * 0.5}s forwards`;
+                        }, 0);
+                    });
+
+                    // Select and animate right group paragraphs
+                    const rightGroup = entry.target.querySelectorAll(".animated-group-right p");
+                    rightGroup.forEach((p, index) => {
+                        setTimeout(() => {
+                            p.style.animation = `fadeInRight 0.5s ease-out ${index * 0.5}s forwards`;
+                        }, 0);
+                    });
+
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        }, options);
+
+        // Observe each animated section
+        const sections = document.querySelectorAll(".animated-section");
+        sections.forEach(section => observer.observe(section));
+    });
+
+
+
+
+
+    $(document).ready(function() {
+        $("#testimonial-owl").owlCarousel({
+            items: 2,
+            dots: true,
+            margin: 50,
+            nav: true,
+            loop: true,
+            autoplay: 3000,
+            autoplayHoverPause: true,
+            slideSpeed: 3000,
+            paginationSpeed: 5000,
+            smartSpeed: 1000,
+            navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+            responsive: {
+                992: {
+                    items: 3
+                },
+                600: {
+                    items: 3
+                },
+                320: {
+                    items: 2
+                },
+                280: {
+                    items: 2
+                }
+            }
+        });
+    });
+
+
+    function showModel() {
+        const popUp = document.getElementById('popUp');
+        const overlay = document.getElementById('overlay');
+
+        // Trigger the show animations
+        popUp.classList.add("show");
+        overlay.classList.add("show");
+    }
+
+    function closeModel() {
+        const popUp = document.getElementById('popUp');
+        const overlay = document.getElementById('overlay');
+
+        // Trigger the hide animations
+        popUp.classList.remove("show");
+        overlay.classList.remove("show");
+    }
+
+    // 2nd popup
+
+    function showModel1() {
+        const popUp1 = document.getElementById('popUp1');
+        const overlay1 = document.getElementById('overlay1');
+
+        // Trigger the show animations
+        popUp1.classList.add("show");
+        overlay1.classList.add("show");
+    }
+
+    function closeModel1() {
+        const popUp1 = document.getElementById('popUp1');
+        const overlay1 = document.getElementById('overlay1');
+
+        // Trigger the hide animations
+        popUp1.classList.remove("show");
+        overlay1.classList.remove("show");
+    }
+
+
+    // 3nd popup
+
+    function showModel2() {
+        const popUp1 = document.getElementById('popUp2');
+        const overlay1 = document.getElementById('overlay2');
+
+        // Trigger the show animations
+        popUp1.classList.add("show");
+        overlay1.classList.add("show");
+    }
+
+    function closeModel2() {
+        const popUp1 = document.getElementById('popUp2');
+        const overlay1 = document.getElementById('overlay2');
+
+        // Trigger the hide animations
+        popUp1.classList.remove("show");
+        overlay1.classList.remove("show");
+    }
+</script>
+
+
+</body>
+
+</html>

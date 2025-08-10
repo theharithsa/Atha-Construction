@@ -1,0 +1,47 @@
+<!-- Navigation Header Section -->
+
+    <section class="navbar-section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid d-flex justify-content-between">
+                    <a class="navbar-brand" href="{{baseUrl}}/">
+                        <img src="{{baseUrl}}/assets/images/logo.png" alt="Atha construction" title="Atha construction">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav w-100 d-flex justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage '')}}active{{/if}}{{#if (eq currentPage 'atha')}}active{{/if}}" href="{{baseUrl}}/">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'about')}}active{{/if}}" href="{{baseUrl}}/about">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'packages')}}active{{/if}}" href="{{baseUrl}}/packages">PACKAGES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'properties')}}active{{/if}}" href="{{baseUrl}}/properties">PROPERTIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'careers')}}active{{/if}}" href="{{baseUrl}}/careers">Careers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'blogs')}}active{{/if}}" href="{{baseUrl}}/blogs">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'gallery')}}active{{/if}}" href="{{baseUrl}}/gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'services')}}active{{/if}}" href="{{baseUrl}}/services">SERVICES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{#if (eq currentPage 'contact')}}active{{/if}}" href="{{baseUrl}}/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
