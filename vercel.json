@@ -1,13 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "src/serverless.ts", "use": "@vercel/node" },
+    { "src": "dist/serverless.js", "use": "@vercel/node" },
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
     { "src": "/(favicon.ico|robots.txt|sitemap.xml)", "dest": "/public/$1" },
-    { "src": "/(.*)", "dest": "src/serverless.ts" }
+    { "src": "/(.*)", "dest": "dist/serverless.js" }
   ]
 }
 
