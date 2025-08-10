@@ -8,7 +8,12 @@ export const config = {
   // Server Configuration
   port: parseInt(process.env.PORT || '3000', 10),
   nodeEnv: process.env.NODE_ENV || 'development',
-  baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  // Prefer explicit BASE_URL, else Vercel-provided host, else localhost
+  baseUrl: ((): string => {
+    if (process.env.BASE_URL) return process.env.BASE_URL;
+    if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+    return 'http://localhost:3000';
+  })(),
 
   // Email Configuration
   email: {
